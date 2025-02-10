@@ -7,25 +7,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="heart.png" type="image/x-icon">
 </head>
 <body>
-    <div id="heartcontainer">
-        <div class="heart" id="heart1"></div>
-        <div class="heart" id="heart2"></div>
-        <div class="heart" id="heart3"></div>
-    </div>
     <div id="container">
         <div id="card">    
             <div id="cardfront">
                 <h1>Happy Valentine</h1>
                 <h3>↓↓↓ (Click the hearts!) ↓↓↓</h3>
-                <img src="art.png" alt="" id="moodeng">
+                <img src="art.png" alt="" id="moodeng" title="Me&you ^^">
+                <div id="heartcontainer">
+                    <div class="heart" id="heart1"></div>
+                    <div class="heart" id="heart2"></div>
+                    <div class="heart" id="heart3"></div>
+                </div>
             </div>
             <div id="cardback">
                 <div id="coupleselfieborder" title="Me&you ^^">
                     <img src="pinme.png" alt="selfie" id="coupleselfie" title="Me&you ^^">
                 </div>
+                <div id="roseborder">
+                    <img src="rose.png" alt="" id="rose2" class="rose">
+                </div>
+                <a href="pinme.png" download>
+                </a>
             </div>
         </div>
         <div id="cardinside">
@@ -40,6 +45,34 @@
         <img src="butterfly.png" alt="" id="butterfly4" class="butterfly">
         <img src="butterfly.png" alt="" id="butterfly5" class="butterfly">
     </div>
+
+
+    <div class="menubutton" id="open">
+        <h1>— — —</h1>
+    </div>
+    <div id="menu">
+        <div class="menubutton" id="close">
+            <h1>— — —</h1>
+        </div>
+        <div id="firstimgborder">
+            <img src="artwhitebg.png" alt="">
+        </div>
+        <a href="artwhitebg.png" download id="firstimglink">
+            <div id="img1download">Download image</div>
+        </a>
+
+        <div id="secondimgborder">
+            <img src="pinme.png" alt="">
+        </div>
+        <a href="pinme.png" download id="secondimglink">
+            <div id="img2download">Download image</div>
+        </a>
+    </div>
+    <div id="infocloud">
+        <h1>made by harddisk with html css js</h1>
+    </div>
+    <button id="info">i</button>
+
 
     <audio src="papersound.wav" id="paper"></audio>
     <script src="script.js"></script>

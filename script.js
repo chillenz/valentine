@@ -76,7 +76,14 @@ async function heartclick(clickedheart){
         }
         document.body.appendChild(heartcontainer);
         heartcontainer.style.top = '69%';
+        
 
+        await sleep(3000);
+        butterfly1.style.display = 'none';
+        butterfly2.style.display = 'none';
+        butterfly3.style.display = 'none';
+        butterfly4.style.display = 'none';
+        butterfly5.style.display = 'none';
     }
 }
 

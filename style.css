@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: darkorchid;
+    color: white;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-size: 250%;
+    background-color:  #b658db;
+    font-family: tahoma;
+    overflow: hidden;
+}
+
+#container{
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    position: relative;
+    perspective: 2500px;
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .5s ease;
+}
+#cardfront{
+    background-color: pink;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    animation-fill-mode: forwards;
+    z-index: 5;
+    backface-visibility: hidden;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.11);
+}
+
+#cardback{
+    background-color: pink;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    animation: rotateback 1.5s ease;
+    animation-fill-mode: forwards;
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+#cardinside{
+    background-color: rgb(250, 185, 195);
+    width: 600px;
+    height: 410px;
+    position: absolute;
+    transform-origin: center top;
+    z-index: -1;
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.432);
+}
+
+
+#card{
+    width: 600px;
+    height: 400px;
+    transform-origin: top;
+    backface-visibility: hidden;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+#cardfront h1{
+    font-family: "Great Vibes";
+    font-size: 190%;
+    text-align: center;
+    z-index: 6;
+    color: #f0456a;
+    font-weight:900;
+}
+
+#heartcontainer{
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    top: 66%;
+    height: 32px;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    
+}
+
+.heart { 
+    width: 50px; 
+    height: 32px; 
+    z-index: 6;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+} 
+
+.heart:before, .heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 20px; 
+    top: 0; 
+    width: 20px; 
+    height: 32px; 
+    background: rgb(247, 6, 6); 
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+.heart:after { 
+    bottom: 26%;
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
+
+.butterfly{
+    width: 80px;
+    position: absolute;
+    z-index: -1;
+}
+
+
+#butterfly1{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    transition: all 2.4s ease;
+}
+#butterfly2{
+    left: 30%;
+    transform: translateX(-50%);
+    top: 25%;
+    transition: all 2.8s ease;
+}
+#butterfly3{
+    top: 25%;
+    left: 70%;
+    transform: translateX(-50%) rotateY(180deg);
+    transition: all 2.3s ease;
+}
+#butterfly4{
+    transform: translateX(-50%);
+    left: 40%;
+    top: 50%;
+    transition: all 3.0s ease;
+}
+#butterfly5{
+    transform: translateX(-50%) rotateY(180deg);
+    top: 50%;
+    left: 60%;
+    transition: all 2.6s ease;
+}
+
+#coupleselfie{
+    width: 330px;
+    right: 0%;
+    bottom: 20%;
+    position: relative;
+}
+
+#coupleselfieborder{
+    overflow: hidden;
+    width: 330px;
+    height: 240px;
+    object-fit: fill;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px darkgoldenrod double;
+}
+
+#cardfront h3{
+    font-size: 35%;
+    opacity: 0.4;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    color: rgb(160, 100, 108);
+    position: absolute;
+    top: 73%;
+    
+}
+
+#moodeng{
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#message{
+    font-size: 17.5px;
+    width: 75%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    background-color: antiquewhite;
+    height: 65%;
+    font-family: 'Lora';
+}
+
+#valentineborder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#message p{
+    width: 70%;
+    top: 50%;
+    position: relative;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+#coupleselfie:active{
+    scale: 1.5;
+}

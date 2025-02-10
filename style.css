@@ -89,7 +89,7 @@ body{
     flex-wrap: wrap;
     position: absolute;
     left: 50%;
-    top: 66%;
+    top: 86%;
     height: 32px;
     transform: translate(-50%, -50%);
     z-index: 6;
@@ -235,4 +235,200 @@ body{
 
 #coupleselfie:active{
     scale: 1.5;
+}
+
+
+.rose{
+    position: absolute;
+    width: 200px;
+    top: -40%;
+    left: -20%;
+}
+
+
+#rose2{
+    top: 50%;
+    left: 66%;
+}
+
+#roseborder{
+    width: 330px;
+    height: 240px;
+    object-fit: fill;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#info{
+    width: 40px;
+    height: 40px;
+    font-size: 60%;
+    border-radius: 20px;
+    border: 2px rgba(165, 165, 165, 0.678) solid;
+    color: rgba(165, 165, 165, 0.678);
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.2s;
+}
+
+#info:hover{background-color: rgba(165, 165, 165, 0.192);}
+
+#infocloud {
+	position: absolute;
+	background: #e6e6e6;
+    top: 25px;
+    right: 65px;
+    width: 0;
+    overflow: hidden;
+    height: 30px;
+    transition: width 0.4s;
+}
+#infocloud h1{
+    padding: 20px;
+    font-size: 40%;
+    position: relative;
+    font-weight: 500;
+    height: max-content;
+    transform: translateY(-50%);
+    text-wrap: nowrap;
+}
+
+#cardback a{
+    overflow: hidden;
+    width: 330px;
+    height: 240px;
+    object-fit: fill;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 25;
+}
+
+
+.menubutton{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 8px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    user-select: none;
+}
+
+.menubutton h1{
+    left: 0;
+    top: -20px;
+    text-align: center;
+    position: relative;
+    color: antiquewhite;
+}
+
+#menu{
+    height: 100vh;
+    background-color: rgb(66, 5, 97);
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.356);
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s;
+    z-index: 2000;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#menu::-webkit-scrollbar{
+    display: none;
+}
+
+#firstimgborder{
+    overflow: hidden;
+    width: 80%;
+    height: 150px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+#firstimgborder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#img1download{
+    font-size: 17px;
+    background: green;
+    width: max-content;
+    top: 80px;
+    color: white;
+    text-decoration: transparent;
+    padding: 5px;
+    position: relative;
+    border-radius: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#firstimglink{
+    text-decoration: none;
+}
+
+
+
+#secondimgborder{
+    overflow: hidden;
+    width: 80%;
+    height: 250px;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+#secondimgborder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#img2download{
+    font-size: 17px;
+    background: green;
+    width: max-content;
+    top: 150px;
+    color: white;
+    text-decoration: transparent;
+    padding: 5px;
+    position: relative;
+    border-radius: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#secondimglink{
+    text-decoration: none;
+}
+
+@media screen and (max-width:675px){
+    #container{
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+@media screen and (max-width:1300px) and (min-width: 675px){
+    #container{
+        transform: translate(-50%, -50%) scale(1);
+    }
 }

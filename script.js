@@ -17,10 +17,19 @@ const butterfly5 = document.getElementById('butterfly5');
 const cardinside = document.getElementById('cardinside');
 const heartcontainer = document.getElementById('heartcontainer');
 const info = document.getElementById('info');
-const infocloud = document.getElementById('infocloud');
+const infopage = document.getElementById('infopage');
 const openbtn = document.getElementById('open');
 const closebtn = document.getElementById('close');
 const menu = document.getElementById('menu')
+const menupage1 = document.getElementById('menupage1')
+const menupage2 = document.getElementById('menupage2')
+const lastpage = document.getElementById('lastpage')
+const nextpage = document.getElementById('nextpage')
+const currentpage = document.getElementById('currentpage')
+const closevideo = document.getElementById('closevideo')
+const videoborder = document.getElementById('videoborder');
+const mathart = document.getElementById('mathart')
+let inInfo = false;
 
 
 function sleep(ms) {
@@ -95,9 +104,13 @@ heart3.addEventListener('click', () => heartclick('heart3'))
 
 
 async function infocheck(){
-    infocloud.style.width = '280px';
-    await sleep(2000);
-    infocloud.style.width = '0'
+    if (!inInfo){
+        infopage.style.display = 'flex';
+        inInfo = true;
+    } else{
+        infopage.style.display = 'none';
+        inInfo = false;
+    }
 }
 
 info.addEventListener('click', infocheck);
@@ -113,3 +126,36 @@ function togglemenu(btn){
 
 openbtn.addEventListener('click', () => togglemenu('open'));
 closebtn.addEventListener('click', () => togglemenu('close'));
+
+
+function golastpage(){
+    menupage1.style.display = 'block';
+    menupage2.style.display = 'none';
+    currentpage.innerText = 'Page 1';
+}
+
+lastpage.addEventListener('click', golastpage);
+
+
+function gonextpage(){
+    menupage1.style.display = 'none';
+    menupage2.style.display = 'block';
+    currentpage.innerText = 'Page 2';
+}
+
+nextpage.addEventListener('click', gonextpage);
+
+
+function closevid(){
+    videoborder.style.display='none';
+}
+
+closevideo.addEventListener('click', closevid);
+
+
+function openvid(){
+    videoborder.style.display = 'flex';
+    menu.style.left = '-250px';
+}
+
+mathart.addEventListener('click', openvid);

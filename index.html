@@ -52,26 +52,61 @@
     </div>
     <div id="menu">
         <div class="menubutton" id="close">
-            <h1>— — —</h1>
+            <h1>— — —</h1 id='closetext'>
         </div>
-        <div id="firstimgborder">
-            <img src="artwhitebg.png" alt="">
+        <div id="menupage1">
+            <div id="firstimgborder">
+                <img src="artwhitebg.png" alt="">
+            </div>
+            <a href="artwhitebg.png" download id="firstimglink">
+                <div id="img1download">Download image</div>
+            </a>
+            
+            <div id="secondimgborder">
+                <img src="pinme.png" alt="">
+            </div>
+            <a href="pinme.png" download id="secondimglink">
+                <div id="img2download">Download image</div>
+            </a>
         </div>
-        <a href="artwhitebg.png" download id="firstimglink">
-            <div id="img1download">Download image</div>
-        </a>
 
-        <div id="secondimgborder">
-            <img src="pinme.png" alt="">
+        <div id="menupage2">
+            <div id="thirdimgborder">
+                <img src="ocartwhitebg.jpg" alt="">
+            </div>
+            <a href="ocartwhitebg.jpg" download id="thirdimglink">
+                <div id="img3download">Download image</div>
+            </a>
+
+
+            <div id="fourthimgborder">
+                <h1>Speeddraw</h1>
+                <img src="mathart.png" alt="" id="mathart">
+                <h3>click image to watch</h3>
+            </div>
         </div>
-        <a href="pinme.png" download id="secondimglink">
-            <div id="img2download">Download image</div>
-        </a>
+
+        <div id="pages">
+            <h1 id="lastpage">&lt;</h1>
+            <h1 id="currentpage">Page 1</h1>
+            <h1 id="nextpage">&gt;</h1>
+        </div>
     </div>
-    <div id="infocloud">
-        <h1>made by harddisk with html css js</h1>
+    <div id="infopage">
+        <div id="infoborder">
+            <h1>This website took me so long to make 😭</h1>
+            <h1>Anyway, i hope you liked it</h1>
+            <h3>Also in case you're wondering, i wrote the message in the letter myself</h3>
+            <h4 id="desmos">Math art made in Desmos</h4>
+            <h4 id="html">Website made with HTML/CSS/JS</h4>
+        </div>
     </div>
     <button id="info">i</button>
+
+    <div id="videoborder">
+        <video src="pinartspeeddraw.mp4" controls muted></video>
+        <h1 id="closevideo">X</h1>
+    </div>
 
 
     <audio src="papersound.wav" id="paper"></audio>
